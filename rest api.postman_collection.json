@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "df9a1dfb-3784-458c-ae2c-f896717970ac",
+		"name": "rest api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18960529"
+	},
+	"item": [
+		{
+			"name": "send email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3Vwcml5YWRpIDExOTYiLCJlbWFpbCI6InlhZGliZXJzeXVrdXJAZ21haWwuY29tIiwibG9nZ2VkX2F0IjoiMjAyMy0xMi0yNSAxODowMTo0MCIsImV4cGlyZWRfYXQiOiIyMDIzLTEyLTI2IDE4OjAxOjQwIn0.CqY7RxRBQtsg_MydDnrdCOrPPTxEZufRlVVYWSPcJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "to",
+							"value": "ahmadyadi96@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "Tes API Oauth",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "send",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/public/api/mails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"public",
+						"api",
+						"mails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all send email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3Vwcml5YWRpIDExOTYiLCJlbWFpbCI6InlhZGliZXJzeXVrdXJAZ21haWwuY29tIiwibG9nZ2VkX2F0IjoiMjAyMy0xMi0yNSAxODowMTo0MCIsImV4cGlyZWRfYXQiOiIyMDIzLTEyLTI2IDE4OjAxOjQwIn0.CqY7RxRBQtsg_MydDnrdCOrPPTxEZufRlVVYWSPcJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/public/api/mails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"public",
+						"api",
+						"mails"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "1d9d1f55b5288b46dc97",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8000/public/api/callback",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "59f7abe5e98d1c5de827",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "2d9821d3b16a97e43b212329cf5617c5",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "read:user",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get email by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3Vwcml5YWRpIDExOTYiLCJlbWFpbCI6InlhZGliZXJzeXVrdXJAZ21haWwuY29tIiwibG9nZ2VkX2F0IjoiMjAyMy0xMi0yNSAxODowMTo0MCIsImV4cGlyZWRfYXQiOiIyMDIzLTEyLTI2IDE4OjAxOjQwIn0.CqY7RxRBQtsg_MydDnrdCOrPPTxEZufRlVVYWSPcJdM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/public/api/mail?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"public",
+						"api",
+						"mail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
