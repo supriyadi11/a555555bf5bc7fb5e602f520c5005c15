@@ -26,7 +26,7 @@ docker exec php_docker php worker
 ## pgAdmin
 - Buka browser `http://localhost:5050` email `admin@email.com` password `admin123`
 - register server dengan hostname/address `postgres` username `postgres` password `123`
-![pgAdmin](pgadmin.jpg "pgAdmin")
+![pgAdmin](pgadmin.JPG "pgAdmin")
 
 
 ## API Referensi
